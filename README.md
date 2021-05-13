@@ -65,6 +65,6 @@ params = {'n_clusters': 10, 'n_neighbors': int(
 sc = SpectralClustering(**params).fit(x)
 
 # evaluate clustering results (only if true labels is known)
-print(nmi(y_true, sc.labels_))  # output: 0.6808
-print(acc(y_true, sc.labels_))  # output: 0.6304
+print(nmi(y_true, sc.labels_))  # output: 0.6855
+print(acc(y_true, sc.labels_))  # output: 0.6520
 ```
