@@ -41,19 +41,24 @@ print(sc.labels_) # output: [1 1 1 0 0 0]
 ```python
 from spectral_methods import SpectralClustering
 import numpy as np
+from util import load_data
+from util import acc
+from sklearn.metrics import normalized_mutual_info_score as nmi
 
-# data
-X = np.array([[0, 0], [0, 1], [1, 1],
-              [5, 5], [5, 6], [6, 6]])
+# load MNIST dataset
+X, y_true = load_data('mnist')
 
 # define hyperparameters
-params = {'n_clusters': 2, 'n_neighbors': 3,
-          'sigma': 'max', 'affinity': 'k-hNNG',
-          'type_of_laplacian': 'rw', 'knn_aprox': False,
-          'eigen_aprox': False}
+params = {'n_clusters': 10, 'n_neighbors': int(
+    np.log(X.shape[0])*10),
+    'sigma': 'max', 'affinity': 'k-hNNG',
+    'type_of_laplacian': 'rw', 'knn_aprox': True,
+    'eigen_aprox': True}
 
+# time: aprox 24 seconds
 sc = SpectralClustering(**params).fit(X)
 
-print(sc.labels_)
-# output: [1 1 1 0 0 0]
+# evaluate clustering results (only if true labels is known)
+print(nmi(y_true, sc.labels_))  # output: 0.6808
+print(acc(y_true, sc.labels_))  # output: 0.6304
 ```
