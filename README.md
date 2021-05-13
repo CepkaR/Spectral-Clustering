@@ -1,5 +1,7 @@
 # Spectral clustering
-This package implements spectral clustering algoritm. If you wont to reproduce result from our bachlor thesis run experiments.py script.
+This is the accompanying code to our bachelor thesis. 
+If you want to reproduce results from our bachelor thesis, run experiments.py script. This package can also be freely used 
+as spectral clustering implementation for cluster analysis purpose (see Usage for examples).
 
 Abstract:
 
