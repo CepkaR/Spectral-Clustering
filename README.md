@@ -1,4 +1,5 @@
 # Spectral clustering
+This package implements spectral clustering algoritm. If you wont to reproduce result from our bachlor thesis run experiments.py script.
 
 Abstract:
 
