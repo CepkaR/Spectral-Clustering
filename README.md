@@ -4,7 +4,7 @@
 *Aeroplane from (b) subimage is taken from this [link](https://www.newscientist.com/article/2255751-zero-emissions-hydrogen-plane-test-was-part-powered-by-fossil-fuels/).*
 
 This is the accompanying code to our bachelor thesis. 
-If you want to reproduce results from our bachelor thesis, run `src/experiments.py` script. This package can also be freely used 
+If you want to reproduce results from our bachelor thesis, run `src/experiments.py`. This package can also be freely used 
 as spectral clustering implementation for cluster analysis purpose (see [Usage](#Usage) for examples).
 
 ### Abstract:
