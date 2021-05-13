@@ -19,7 +19,7 @@ This code was written in python 3.8.8 with the following packages:
 * scikit-learn 0.24.1
 * pynndescent 0.5.2
 
-* tensorflow 2.3.0 (only for download MNIST and Fashion-MNIST dataset)
+* tensorflow 2.3.0 (only for load MNIST and Fashion-MNIST dataset)
 * pandas 1.2.3 (only for store experimental results)
 
 If you want to run `src/experiments.py` with REUTERS dataset, you schould download it by `cd data; ./get_data.sh` and prepocess it by `src/data/make_reuters_dataset.py`.
