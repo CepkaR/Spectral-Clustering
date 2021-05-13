@@ -53,7 +53,7 @@ if __name__ == "__main__":
 
     # parameter n_neighbors was set in run_experiment(), n_neighbors = int(10*ln(n_samples))
     params = {"sigma": ["max", "mean"], "type_of_laplacian": [
-        "rw", "sym", "clasic"], "affinity": ["k-hNNG", "k-mNNG"]}
+        "rw", "sym", "clasic"], "affinity": ["k-hNNG"]}
 
     num_of_experiments = 1
 

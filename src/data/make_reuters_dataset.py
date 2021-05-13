@@ -2,7 +2,7 @@ import random
 import numpy as np
 from scipy import sparse
 
-# from dec (https://github.com/piiswrong/dec/tree/master/dec)
+# from dec https://github.com/piiswrong/dec/tree/master/dec
 
 def make_reuters_data():
   np.random.seed(1234)

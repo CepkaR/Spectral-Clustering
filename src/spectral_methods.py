@@ -2,7 +2,6 @@ import numpy as np
 from scipy import sparse
 from sklearn.cluster import KMeans
 from numpy.linalg import norm
-from sklearn.neighbors import NearestNeighbors
 import time
 from sklearn.neighbors import kneighbors_graph
 from sklearn.neighbors import radius_neighbors_graph
@@ -63,15 +62,33 @@ class SpectralClustering:
         print_time : {True,False}, default=False
           Prints the computation time of the to_graph, laplacian matrix, eigenvectors.
 
-
         ---------- Attributes ----------
-
+        
         self.eigenval_ : array of shape (n_clusters-1,) 
 
         self.eigenvec_: ndarray of shape (n_samples,n_clusters-1) 
 
         labels_ : ndarray of shape (n_samples,)
-            Labels of each point.
+           Labels of each point.
+
+         ---------- Example ----------
+         
+        from spectral_methods import SpectralClustering
+        import numpy as np
+
+        # data
+        x = np.array([[0, 0], [0, 1], [1, 1],
+              [5, 5], [5, 6], [6, 6]])
+
+        # define hyperparameters
+        params = {'n_clusters': 2, 'n_neighbors': 3,
+              'sigma': 'max', 'affinity': 'k-hNNG',
+              'type_of_laplacian': 'rw', 'knn_aprox': False,
+              'eigen_aprox': False}
+
+        sc = SpectralClustering(**params).fit(x)
+
+        print(sc.labels_) # output: [1 1 1 0 0 0]
         '''
 
         self.n_clusters = n_clusters
@@ -183,7 +200,6 @@ class SpectralClustering:
             if knn_aprox:
                 A = PyNNDescentTransformer(
                     n_neighbors=n_neighbors, metric="euclidean", n_jobs=-1).fit_transform(X)
-                sparse.save_npz("graph", A)
             else:
                 A = kneighbors_graph(
                     X, n_neighbors, mode='distance', include_self=False, n_jobs=-1)

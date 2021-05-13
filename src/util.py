@@ -1,13 +1,10 @@
 def acc(y_true, y_pred):
     import numpy as np
-    from sklearn.metrics import normalized_mutual_info_score, adjusted_rand_score
-    nmi = normalized_mutual_info_score
-    ari = adjusted_rand_score
 
     """
     https://github.com/XifengGuo/DEC-keras/blob/master/metrics.py
     
-    Calculate clustering accuracy. Require scikit-learn installed
+    Calculate clustering accuracy. 
     # Arguments
         y: true labels, numpy.array with shape `(n_samples,)`
         y_pred: predicted labels, numpy.array with shape `(n_samples,)`
