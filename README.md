@@ -18,7 +18,6 @@ This code was written in python 3.8.8 with the following packages:
 If you want to run experiments.py script with REUTERS dataset, you schould download it by cd data; ./get_data.sh and prepocess it by make_reuters_dataset.py.
 
 ## Usage
-
 ```python
 from spectral_methods import SpectralClustering
 import numpy as np
