@@ -17,5 +17,12 @@ This code was written in python 3.8.8 with the following packages:
 
 If you want to run experiments.py script with REUTERS dataset, you schould download it by cd data; ./get_data.sh and prepocess it by make_reuters_dataset.py.
 
-## Example usage
-...
+## Usage
+
+```python
+import foobar
+
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
