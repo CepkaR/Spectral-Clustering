@@ -1,7 +1,7 @@
 # Spectral clustering
 
 ![](https://github.com/CepkaR/Spectral-Clustering/blob/main/spectral_clustering.png)
-*Aeroplane background image is taken from this [link](https://www.newscientist.com/article/2255751-zero-emissions-hydrogen-plane-test-was-part-powered-by-fossil-fuels/).*
+*Aeroplane from (b) subimage is taken from this [link](https://www.newscientist.com/article/2255751-zero-emissions-hydrogen-plane-test-was-part-powered-by-fossil-fuels/).*
 
 This is the accompanying code to our bachelor thesis. 
 If you want to reproduce results from our bachelor thesis, run experiments.py script. This package can also be freely used 
