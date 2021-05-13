@@ -20,9 +20,19 @@ If you want to run experiments.py script with REUTERS dataset, you schould downl
 ## Usage
 
 ```python
-import foobar
+X = np.array([[0, 0], [0, 1], [1, 1],
+              [5, 5], [5, 6], [6, 6]])
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+n_clusters = 2
+n_neighbors = 3  # n_neighbors <= n_samples
+sigma = 'max'
+affinity = 'k-hNNG'
+type_of_laplacian = 'rw'
+knn_aprox = False
+eigen_aprox = False
+
+sc = SpectralClustering(n_clusters=n_clusters, n_neighbors=n_neighbors, sigma=sigma, affinity=affinity, type_of_laplacian=type_of_laplacian, knn_aprox=knn_aprox,
+                        eigen_aprox=eigen_aprox)
+
+sc.fit(X)
 ```
