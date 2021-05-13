@@ -35,8 +35,8 @@ x = np.array([[0, 0], [0, 1], [1, 1],
 
 # define hyperparameters
 params = {'n_clusters': 2, 'n_neighbors': 3,
-          'sigma': 'max', 'affinity': 'k-hNNG',
-          'type_of_laplacian': 'rw', 'knn_aprox': False,
+          'sigma': 'mean', 'affinity': 'k-hNNG',
+          'type_of_laplacian': 'sym', 'knn_aprox': False,
           'eigen_aprox': False}
 
 sc = SpectralClustering(**params).fit(x)
@@ -57,8 +57,8 @@ x, y_true = load_data('mnist')
 # define hyperparameters
 params = {'n_clusters': 10, 'n_neighbors': int(
     np.log(X.shape[0])*10),
-    'sigma': 'max', 'affinity': 'k-hNNG',
-    'type_of_laplacian': 'rw', 'knn_aprox': True,
+    'sigma': 'mean', 'affinity': 'k-hNNG',
+    'type_of_laplacian': 'sym', 'knn_aprox': True,
     'eigen_aprox': True}
 
 # time: aprox 24 seconds
