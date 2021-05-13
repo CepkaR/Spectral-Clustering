@@ -23,10 +23,30 @@ If you want to run experiments.py script with REUTERS dataset, you schould downl
 from spectral_methods import SpectralClustering
 import numpy as np
 
-# trivial example
+# data
 X = np.array([[0, 0], [0, 1], [1, 1],
               [5, 5], [5, 6], [6, 6]])
 
+# define hyperparameters
+params = {'n_clusters': 2, 'n_neighbors': 3,
+          'sigma': 'max', 'affinity': 'k-hNNG',
+          'type_of_laplacian': 'rw', 'knn_aprox': False,
+          'eigen_aprox': False}
+
+sc = SpectralClustering(**params).fit(X)
+
+print(sc.labels_) # output: [1 1 1 0 0 0]
+```
+
+```python
+from spectral_methods import SpectralClustering
+import numpy as np
+
+# data
+X = np.array([[0, 0], [0, 1], [1, 1],
+              [5, 5], [5, 6], [6, 6]])
+
+# define hyperparameters
 params = {'n_clusters': 2, 'n_neighbors': 3,
           'sigma': 'max', 'affinity': 'k-hNNG',
           'type_of_laplacian': 'rw', 'knn_aprox': False,
