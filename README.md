@@ -1,6 +1,6 @@
 # Spectral clustering
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/CepkaR/Spectral-Clustering/blob/main/spectral_clustering.png)
 
 This is the accompanying code to our bachelor thesis. 
 If you want to reproduce results from our bachelor thesis, run experiments.py script. This package can also be freely used 
