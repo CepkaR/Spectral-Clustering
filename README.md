@@ -56,7 +56,7 @@ x, y_true = load_data('mnist')
 
 # define hyperparameters
 params = {'n_clusters': 10, 'n_neighbors': int(
-    np.log(X.shape[0])*10),
+    np.log(x.shape[0])*10),
     'sigma': 'mean', 'affinity': 'k-hNNG',
     'type_of_laplacian': 'sym', 'knn_aprox': True,
     'eigen_aprox': True}
