@@ -34,9 +34,12 @@ x = np.array([[0, 0], [0, 1], [1, 1],
               [5, 5], [5, 6], [6, 6]])
 
 # define hyperparameters
-params = {'n_clusters': 2, 'n_neighbors': 3,
-          'sigma': 'mean', 'affinity': 'k-hNNG',
-          'type_of_laplacian': 'sym', 'knn_aprox': False,
+params = {'n_clusters': 2, 
+          'n_neighbors': 3,
+          'sigma': 'mean', 
+          'affinity': 'k-hNNG',
+          'type_of_laplacian': 'sym', 
+          'knn_aprox': False,
           'eigen_aprox': False}
 
 sc = SpectralClustering(**params).fit(x)
@@ -55,11 +58,13 @@ from sklearn.metrics import normalized_mutual_info_score as nmi
 x, y_true = load_data('mnist')
 
 # define hyperparameters
-params = {'n_clusters': 10, 'n_neighbors': int(
-    np.log(x.shape[0])*10),
-    'sigma': 'mean', 'affinity': 'k-hNNG',
-    'type_of_laplacian': 'sym', 'knn_aprox': True,
-    'eigen_aprox': True}
+params = {'n_clusters': 10, 
+          'n_neighbors': int(np.log(x.shape[0])*10),
+          'sigma': 'mean', 
+          'affinity': 'k-hNNG',
+          'type_of_laplacian': 'sym', 
+          'knn_aprox': True,
+          'eigen_aprox': True}
 
 # time: aprox 24 seconds
 sc = SpectralClustering(**params).fit(x)
